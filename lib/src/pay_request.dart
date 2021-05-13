@@ -29,55 +29,55 @@ class Bolt11PaymentRequest {
   WordReader _reader;
 
   Bolt11PaymentRequest(this.paymentRequest) {
-    Bech32Codec codec = Bech32Codec();
-    this._bech32 = codec.decode(
-      this.paymentRequest,
-      this.paymentRequest.length,
+    var codec = Bech32Codec();
+    _bech32 = codec.decode(
+      paymentRequest,
+      paymentRequest.length,
     );
-    this._reader = WordReader(this._bech32.data);
+    _reader = WordReader(_bech32.data);
 
-    this.prefix = PayRequestPrefix.values.firstWhere(
-        (PayRequestPrefix prefix) => this._bech32.hrp.startsWith(
+    prefix = PayRequestPrefix.values.firstWhere((PayRequestPrefix prefix) =>
+        _bech32.hrp.startsWith(
                 prefix.toString().replaceAll('PayRequestPrefix.', ''))
             ? true
             : false);
 
     _processAmount();
 
-    this.timestamp = this._reader.readInt64(35);
+    timestamp = _reader.readInt64(35);
 
     _processTags();
 
-    this.signature = this._reader.read(520);
+    signature = _reader.read(520);
   }
 
-  _processAmount() {
-    final int prefixLen =
-        this.prefix.toString().replaceAll('PayRequestPrefix.', '').length;
+  void _processAmount() {
+    final prefixLen =
+        prefix.toString().replaceAll('PayRequestPrefix.', '').length;
 
-    if (this._bech32.hrp.length == prefixLen) {
-      this.amount = Decimal.zero;
+    if (_bech32.hrp.length == prefixLen) {
+      amount = Decimal.zero;
     } else {
-      String amt = this._bech32.hrp.substring(
-            prefixLen,
-            this._bech32.hrp.length,
-          );
-      final String unit = amt.substring(amt.length - 1);
+      var amt = _bech32.hrp.substring(
+        prefixLen,
+        _bech32.hrp.length,
+      );
+      final unit = amt.substring(amt.length - 1);
       amt = amt.replaceAll(unit, '');
 
-      this.amount = Decimal.parse(amt) * _amounts[unit];
+      amount = Decimal.parse(amt) * _amounts[unit];
     }
   }
 
-  _processTags() {
-    TaggedFieldDecoder decoder = TaggedFieldDecoder();
+  void _processTags() {
+    var decoder = TaggedFieldDecoder();
 
-    while (this._reader.remaining() > 520) {
-      final int identifier = this._reader.readInt(5);
-      final int len = this._reader.readInt(10);
-      final List<int> data = this._reader.readWords(len);
-      TaggedField tag = decoder.decode(identifier, data);
-      this.tags.add(tag);
+    while (_reader.remaining() > 520) {
+      final identifier = _reader.readInt(5);
+      final len = _reader.readInt(10);
+      final data = _reader.readWords(len);
+      var tag = decoder.decode(identifier, data);
+      tags.add(tag);
     }
   }
 }

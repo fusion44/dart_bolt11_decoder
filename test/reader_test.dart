@@ -5,9 +5,9 @@ void main() {
   group('Reader should read int values', () {
     test('Reader should a single read int value', () {
       // 000010000100010
-      List<int> fivebit = [1, 1, 2];
-      WordReader reader = WordReader(fivebit);
-      int i = reader.readInt(15);
+      var fivebit = <int>[1, 1, 2];
+      var reader = WordReader(fivebit);
+      var i = reader.readInt(15);
       expect(i, 1058);
 
       // 00001
@@ -25,11 +25,11 @@ void main() {
 
     test('reader should read sequence int values', () {
       // 000010001100010
-      List<int> fivebit = [1, 3, 2];
-      WordReader reader = WordReader(fivebit);
+      var fivebit = <int>[1, 3, 2];
+      var reader = WordReader(fivebit);
 
       // first five 00001
-      int i = reader.readInt(5);
+      var i = reader.readInt(5);
       expect(i, 1);
 
       // next ten 0001100010
@@ -39,9 +39,9 @@ void main() {
 
     test('reader should read bit values', () {
       // 00001 00001 00010 00001 00010 -> 00001000 01000100 00010001 (0 dropped)
-      List<int> fivebit = [1, 1, 2, 1, 2];
-      WordReader reader = WordReader(fivebit);
-      List<int> b = reader.read(25, false);
+      var fivebit = <int>[1, 1, 2, 1, 2];
+      var reader = WordReader(fivebit);
+      var b = reader.read(25, false);
       expect(b, [8, 68, 17]);
 
       // 00001 00001 00010 00001 00010 -> 00001000 01000100 00010001 00000000 (padded)
@@ -58,10 +58,10 @@ void main() {
     });
 
     test('reader should read sequence word values', () {
-      List<int> fivebit = [1, 2, 3, 4, 5, 6];
-      WordReader reader = WordReader(fivebit);
+      var fivebit = <int>[1, 2, 3, 4, 5, 6];
+      var reader = WordReader(fivebit);
 
-      List<int> w = reader.readWords(2);
+      var w = reader.readWords(2);
       expect(w, [1, 2]);
 
       w = reader.readWords(4);
@@ -78,13 +78,13 @@ void main() {
     */
 
       // qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypq
-      List<int> b32 = _getb32List();
+      var b32 = _getb32List();
       // 0001020304050607080900010203040506070809000102030405060708090102
-      List<int> b256 = _getb265List();
+      var b256 = _getb265List();
 
-      WordReader reader = WordReader(b32);
+      var reader = WordReader(b32);
 
-      List<int> w = reader.read(256, true);
+      var w = reader.read(256, true);
 
       expect(w, b256);
     });
@@ -126,7 +126,7 @@ List<int> _getb265List() => const [
       2
     ];
 
-_getb32List() => const [
+List<int> _getb32List() => const [
       0,
       0,
       0,

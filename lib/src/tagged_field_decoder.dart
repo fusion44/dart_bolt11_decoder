@@ -30,14 +30,14 @@ class TaggedFieldDecoder {
   }
 
   String _processFallbackAddress(List<int> data) {
-    String version = '' + _processInt(data.sublist(0, 1)).toString();
+    var version = '' + _processInt(data.sublist(0, 1)).toString();
     if (version.length % 2 != 0) version = '0' + version;
     return version + _processHex(data.sublist(1), 'hex');
   }
 
-  _processRouting(List<int> data) {
-    final WordReader reader = WordReader(data);
-    List routing = [];
+  List _processRouting(List<int> data) {
+    final reader = WordReader(data);
+    var routing = [];
     while (reader.remaining() >= 404) {
       routing.add({
         'pubkey': hex.encode(reader.read(264)),
@@ -51,15 +51,15 @@ class TaggedFieldDecoder {
   }
 
   String _processHex(List<int> data, String enc) {
-    final WordReader reader = WordReader(data);
-    List<int> bytes = reader.read(reader.remaining(), false);
+    final reader = WordReader(data);
+    var bytes = reader.read(reader.remaining(), false);
     return enc == 'utf8' ? utf8.decode(bytes) : hex.encode(bytes);
   }
 
   int _processInt(List<int> data) {
-    int val = 0;
-    for (int i = 0; i < data.length; i++) {
-      int word = data[i];
+    var val = 0;
+    for (var i = 0; i < data.length; i++) {
+      var word = data[i];
       val += word * pow(32, data.length - i - 1);
     }
     return val;

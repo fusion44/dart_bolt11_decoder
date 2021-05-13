@@ -8,7 +8,7 @@ List testData = [
         'lnsb20300n1pdarmakpp57zzavxfm39rzg9juc6awru0zfgxvdaewkdupkmmw0x787ds0k04sdqcvdex2ct5v4jzq6twyp3k7er9cqzys7d9uyytydxmsqdz6h9s9wlu2276hjsysa3upu0mz0k55el5323634yjasmnep6hkmyh93ke6nj0v9p3rzgyl5wwu2cfplyg5wv9wdycqaaejt7',
     'prefix': PayRequestPrefix.lnsb,
     'amount': 0.00002030,
-    'timestamp': Int64.parseInt("1540485046"),
+    'timestamp': Int64.parseInt('1540485046'),
     'tagged': [
       {
         'type': 'payment_hash',
@@ -28,7 +28,7 @@ List testData = [
         'lnbc10u1pdsw4dkpp5mmlhfpcw4rj0scnyqmw02yvwpn4h6d40wyep3yew8l954sfl6ucqdqqcqzysxqrrssaayzylslcav0sr3c7237mwea5k67vk7t3j6pdmvnuuadxy0dsj5zalg6merxgndc74nc753lnuyx7t2sjecfpxp820r9use77n7vyqcpp7dlfy',
     'prefix': PayRequestPrefix.lnbc,
     'amount': 0.00001,
-    'timestamp': Int64.parseInt("1527207350"),
+    'timestamp': Int64.parseInt('1527207350'),
     'tagged': [
       {
         'type': 'payment_hash',
@@ -46,7 +46,7 @@ List testData = [
     'request':
         'lnbc1380n1pdcc6z6pp5fu7qgkud3t6shtd49peznfxcme7f8evnnk3gzycpnl4fa0ryffhsdp2g3hkuct5d9hkugr5dusyu6trdakxzueqg3hhy6t9wgxqrpc8cqp2sh2w9xuyttya829nauh96cutmkzmrjw2m6rsf4n4tx86u4zt7nd3c6tew67ff8vn5rmr3nyxscndcwutx47adly0jymev0w764kw2aqphuszdt',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1535928410"),
+    'timestamp': Int64.parseInt('1535928410'),
     'amount': 0.00000138,
     'tagged': [
       {
@@ -67,7 +67,7 @@ List testData = [
     'request':
         'lnbc1pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqdpl2pkx2ctnv5sxxmmwwd5kgetjypeh2ursdae8g6twvus8g6rfwvs8qun0dfjkxaq8rkx3yf5tcsyz3d73gafnh3cax9rn449d9p5uxz9ezhhypd0elx87sjle52x86fux2ypatgddc6k63n7erqz25le42c4u4ecky03ylcqca784w',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0,
     'tagged': [
       {
@@ -86,7 +86,7 @@ List testData = [
     'request':
         'lnbc2500u1pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqdq5xysxxatsyp3k7enxv4jsxqzpuaztrnwngzn3kdzw5hydlzf03qdgm2hdq27cqv3agm2awhz5se903vruatfhq77w3ls4evs3ch9zw97j25emudupq63nyw24cg27h2rspfj9srp',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.0025,
     'tagged': [
       {
@@ -104,7 +104,7 @@ List testData = [
     'request':
         'lnbc2500u1pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqdpquwpc4curk03c9wlrswe78q4eyqc7d8d0xqzpuyk0sg5g70me25alkluzd2x62aysf2pyy8edtjeevuv4p2d5p76r4zkmneet7uvyakky2zr4cusd45tftc9c5fh0nnqpnl2jfll544esqchsrny',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.0025,
     'tagged': [
       {
@@ -122,7 +122,7 @@ List testData = [
     'request':
         'lnbc20m1pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqscc6gd6ql3jrc5yzme8v4ntcewwz5cnw92tz0pc8qcuufvq7khhr8wpald05e92xw006sq94mg8v2ndf4sefvf9sygkshp5zfem29trqq2yxxz7',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
@@ -143,7 +143,7 @@ List testData = [
     'request':
         'lntb20m1pvjluezhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqspp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqfpp3x9et2e20v6pu37c5d9vax37wxq72un98kmzzhznpurw9sgl2v0nklu2g4d0keph5t7tj9tcqd8rexnd07ux4uv2cjvcqwaxgj7v4uwn5wmypjd5n69z2xm3xgksg28nwht7f6zspwp3f9t',
     'prefix': PayRequestPrefix.lntb,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
@@ -168,7 +168,7 @@ List testData = [
     'request':
         'lnbc20m1pvjluezpp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqsfpp3qjmp7lwpagxun9pygexvgpjdc4jdj85fr9yq20q82gphp2nflc7jtzrcazrra7wwgzxqc8u7754cdlpfrmccae92qgzqvzq2ps8pqqqqqqpqqqqq9qqqvpeuqafqxu92d8lr6fvg0r5gv0heeeqgcrqlnm6jhphu9y00rrhy4grqszsvpcgpy9qqqqqqgqqqqq7qqzqj9n4evl6mr5aj9f58zp6fyjzup6ywn3x6sk8akg5v4tgn2q8g4fhx05wf6juaxu9760yp46454gpg5mtzgerlzezqcqvjnhjh8z3g2qqdhhwkj',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
@@ -214,7 +214,7 @@ List testData = [
     'request':
         'lnbc20m1pvjluezhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqspp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqfppj3a24vwu6r8ejrss3axul8rxldph2q7z9kmrgvr7xlaqm47apw3d48zm203kzcq357a4ls9al2ea73r8jcceyjtya6fu5wzzpe50zrge6ulk4nvjcpxlekvmxl6qcs9j3tz0469gq5g658y',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
@@ -239,7 +239,7 @@ List testData = [
     'request':
         'lnbc20m1pvjluezhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqspp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqfppqw508d6qejxtdg4y5r3zarvary0c5xw7kepvrhrm9s57hejg0p662ur5j5cr03890fa7k2pypgttmh4897d3raaq85a293e9jpuqwl0rnfuwzam7yr8e690nd2ypcq9hlkdwdvycqa0qza8',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
@@ -264,7 +264,7 @@ List testData = [
     'request':
         'lnbc20m1pvjluezhp58yjmdan79s6qqdhdzgynm4zwqd5d7xmw5fk98klysy043l2ahrqspp5qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqypqfp4qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q28j0v3rwgy9pvjnd48ee2pl8xrpxysd5g44td63g6xcjcu003j3qe8878hluqlvl3km8rm92f5stamd3jw763n3hck0ct7p8wwj463cql26ava',
     'prefix': PayRequestPrefix.lnbc,
-    'timestamp': Int64.parseInt("1496314658"),
+    'timestamp': Int64.parseInt('1496314658'),
     'amount': 0.02,
     'tagged': [
       {
