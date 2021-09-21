@@ -19,14 +19,14 @@ enum PayRequestPrefix { lnbcrt, lnbc, lntb, lnsb }
 
 class Bolt11PaymentRequest {
   final String paymentRequest;
-  PayRequestPrefix prefix;
-  Decimal amount;
-  Int64 timestamp;
-  List<TaggedField> tags = [];
-  List<int> signature;
+  late PayRequestPrefix prefix;
+  late Decimal amount;
+  late Int64 timestamp;
+  late List<TaggedField> tags = [];
+  late List<int> signature;
 
-  Bech32 _bech32;
-  WordReader _reader;
+  late Bech32 _bech32;
+  late WordReader _reader;
 
   Bolt11PaymentRequest(this.paymentRequest) {
     var codec = Bech32Codec();
@@ -65,7 +65,7 @@ class Bolt11PaymentRequest {
       final unit = amt.substring(amt.length - 1);
       amt = amt.replaceAll(unit, '');
 
-      amount = Decimal.parse(amt) * _amounts[unit];
+      amount = Decimal.parse(amt) * _amounts[unit]!;
     }
   }
 
@@ -77,7 +77,7 @@ class Bolt11PaymentRequest {
       final len = _reader.readInt(10);
       final data = _reader.readWords(len);
       var tag = decoder.decode(identifier, data);
-      tags.add(tag);
+      tags.add(tag!);
     }
   }
 }

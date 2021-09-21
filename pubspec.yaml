@@ -1,16 +1,17 @@
 name: bolt11_decoder
 description: A decoder for BOLT11 invoices
-
-# version: 1.0.0
-# homepage: https://github.com/fusion44/dart_bolt11_decoder
-# author: Stefan Stammberger <some.fusion@gmail.com>
+homepage: https://github.com/fusion44/dart_bolt11_decoder
+repository: https://github.com/fusion44/dart_bolt11_decoder
+issue_tracker: https://github.com/fusion44/dart_bolt11_decoder/issues
+author: Stefan Stammberger <some.fusion@gmail.com>
+version: 1.0.0
 
 environment:
-  sdk: '>=2.5.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   bech32: ^0.2.0
-  decimal: ^1.1.0
+  decimal: ^1.3.0
   fixnum: ^1.0.0
   
 dev_dependencies:

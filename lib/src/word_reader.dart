@@ -22,7 +22,7 @@ class WordReader {
       index++;
     }
     if (pad) {
-      var bits = n % 8;
+      var bits = (n % 8) as int;
       if (bits > 0) {
         response.add((words.removeLast() << (8 - bits)) & 255);
       }

@@ -6,7 +6,7 @@ import 'tagged_field.dart';
 import 'word_reader.dart';
 
 class TaggedFieldDecoder {
-  TaggedField decode(int tag, List<int> data) {
+  TaggedField? decode(int tag, List<int> data) {
     switch (tag) {
       case 1: // payment_hash
         return TaggedField('payment_hash', _processHex(data, 'hex'));
@@ -60,7 +60,7 @@ class TaggedFieldDecoder {
     var val = 0;
     for (var i = 0; i < data.length; i++) {
       var word = data[i];
-      val += word * pow(32, data.length - i - 1);
+      val += (word * pow(32, data.length - i - 1)).toInt();
     }
     return val;
   }

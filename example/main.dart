@@ -8,8 +8,8 @@ void main() {
   print('timestamp: ${req.timestamp}');
   // => timestamp: 1496314658
 
-  req.tags.forEach((TaggedField t) {
-    print('${t.type}: ${t.data}');
+  req.tags.forEach((TaggedField? t) {
+    print('${t!.type}: ${t.data}');
   });
   // => payment_hash: 0001020304050607080900010203040506070809000102030405060708090102
   // => description: Please consider supporting this project
@@ -22,7 +22,7 @@ void main() {
   print('timestamp: ${req.timestamp}');
   // => timestamp: 1496314658
 
-  req.tags.forEach((TaggedField t) {
-    print('${t.type}: ${t.data}');
+  req.tags.forEach((TaggedField? t) {
+    print('${t!.type}: ${t.data}');
   });
 }
