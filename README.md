@@ -1,4 +1,4 @@
-A decoder [BOLT #11](https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md) invoices.
+A decoder for [BOLT #11](https://github.com/lightningnetwork/lightning-rfc/blob/master/11-payment-encoding.md) invoices.
 
 
 ## Usage
