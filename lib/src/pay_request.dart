@@ -77,7 +77,9 @@ class Bolt11PaymentRequest {
       final len = _reader.readInt(10);
       final data = _reader.readWords(len);
       var tag = decoder.decode(identifier, data);
-      tags.add(tag!);
+      if (tag != null) {
+        tags.add(tag);
+      }
     }
   }
 }
