@@ -26,7 +26,7 @@ main() {
 
 ## Features and bugs
 
-Please file feature requests and bugs at the [issue tracker][[tracker](https://github.com/fusion44/dart_bolt11_decoder/issues)].
+Please file feature requests and bugs at the [tracker](https://github.com/fusion44/dart_bolt11_decoder/issues).
 
 [tracker]: http://example.com/issues/replaceme
 

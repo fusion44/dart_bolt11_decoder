@@ -1,5 +1,5 @@
 name: bolt11_decoder
-description: A decoder for BOLT11 invoices
+description: A decoder for Bitcoins Lightning Network BOLT11 invoices for use in wallet apps.
 homepage: https://github.com/fusion44/dart_bolt11_decoder
 repository: https://github.com/fusion44/dart_bolt11_decoder
 issue_tracker: https://github.com/fusion44/dart_bolt11_decoder/issues
