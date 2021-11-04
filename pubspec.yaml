@@ -3,7 +3,7 @@ description: A decoder for Bitcoins Lightning Network BOLT11 invoices for use in
 homepage: https://github.com/fusion44/dart_bolt11_decoder
 repository: https://github.com/fusion44/dart_bolt11_decoder
 issue_tracker: https://github.com/fusion44/dart_bolt11_decoder/issues
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
