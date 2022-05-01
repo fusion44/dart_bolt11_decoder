@@ -8,7 +8,7 @@ void main() {
       var hex =
           '0001020304050607080900010203040506070809000102030405060708090102';
 
-      var result = decoder.decode(1, _getb32PaymentHash())!;
+      var result = decoder.decode(1, _getb32PaymentHash());
       expect(result.type, 'payment_hash');
       expect(result.data, hex);
     });
@@ -17,7 +17,7 @@ void main() {
       var desc = '1 cup coffee';
 
       // xysxxatsyp3k7enxv4js
-      var result = decoder.decode(13, _getb32Description())!;
+      var result = decoder.decode(13, _getb32Description());
       expect(result.type, 'description');
       expect(result.data, desc);
     });
@@ -27,7 +27,7 @@ void main() {
       var b32 = <int>[1, 28];
       var exp = 60;
 
-      var result = decoder.decode(6, b32)!;
+      var result = decoder.decode(6, b32);
       expect(result.type, 'expiry');
       expect(result.data, exp);
     });

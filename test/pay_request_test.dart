@@ -124,7 +124,7 @@ void main() {
 
 dynamic _getPayData(Bolt11PaymentRequest pay, String type) {
   try {
-    return pay.tags.firstWhere((TaggedField? tag) => tag!.type == type)!.data;
+    return pay.tags.firstWhere((TaggedField tag) => tag.type == type).data;
   } catch (e) {
     if (e is! StateError) {
       rethrow;
