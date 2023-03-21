@@ -36,11 +36,8 @@ class Bolt11PaymentRequest {
     );
     _reader = WordReader(_bech32.data);
 
-    prefix = PayRequestPrefix.values.firstWhere((PayRequestPrefix prefix) =>
-        _bech32.hrp.startsWith(
-                prefix.toString().replaceAll('PayRequestPrefix.', ''))
-            ? true
-            : false);
+    prefix = PayRequestPrefix.values.firstWhere(
+        (PayRequestPrefix prefix) => _bech32.hrp.startsWith(prefix.name));
 
     _processAmount();
 
@@ -52,20 +49,24 @@ class Bolt11PaymentRequest {
   }
 
   void _processAmount() {
-    final prefixLen =
-        prefix.toString().replaceAll('PayRequestPrefix.', '').length;
+    final prefixLen = prefix.name.length;
 
     if (_bech32.hrp.length == prefixLen) {
       amount = Decimal.zero;
     } else {
       var amt = _bech32.hrp.substring(
         prefixLen,
-        _bech32.hrp.length,
       );
-      final unit = amt.substring(amt.length - 1);
-      amt = amt.replaceAll(unit, '');
 
-      amount = Decimal.parse(amt) * _amounts[unit]!;
+      final unit = amt.substring(amt.length - 1);
+
+      if (_amounts[unit] == null) {
+        amount = Decimal.parse(amt);
+      } else {
+        amt = amt.replaceAll(unit, '');
+
+        amount = Decimal.parse(amt) * _amounts[unit]!;
+      }
     }
   }
 
