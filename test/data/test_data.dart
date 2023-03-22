@@ -285,5 +285,121 @@ List testData = [
     ],
     'signature':
         '51e4f6446e410a164a6da9f39507e730c26241b4456ab6ea28d1b12c71ef8ca20c9cfe3dffc07d9f8db671ecaa4d20beedb193bda8ce37c59f85f82773a55d4700'
+  },
+  {
+    'request':
+        'lnbc11p3l8hmnpp5fszjygxclu4v8lk9aqwentt8yku9fw23leqsagd824dtgxkhdk5sdqqcqzzgxqyz5vqrzjqwnvuc0u4txn35cafc7w94gxvq5p3cu9dd95f7hlrh0fvs46wpvhdut0l0wdgvxeu5qqqqryqqqqthqqpyrzjqw8c7yfutqqy3kz8662fxutjvef7q2ujsxtt45csu0k688lkzu3ldut0l0wdgvxeu5qqqqryqqqqthqqpysp5sfddfymd22vyr6fq00hxay5nu0qjjhfeu73kft95yvyq7zgksems9qypqsqgnlqghe7e60u00p0gseghk779fc837r74k9l5wwpyh9thdr847j55r9kgqae6yc829atajeaps998sr2vdrzyrjqywh7anvxm6ewzrgqasp0t5',
+    'prefix': PayRequestPrefix.lnbc,
+    'timestamp': Int64.parseInt('1676926835'),
+    'amount': 1,
+    'tagged': [
+      {
+        'type': 'payment_hash',
+        'data':
+            '4c052220d8ff2ac3fec5e81d99ad6725b854b951fe410ea1a7555ab41ad76da9'
+      },
+      {'type': 'description', 'data': ''},
+      {'type': 'min_final_cltv_expiry', 'data': 72},
+      {'type': 'expiry', 'data': 86400},
+      {
+        'type': 'routing',
+        'data': [
+          {
+            'pubkey':
+                '03a6ce61fcaacd38d31d4e3ce2d506602818e3856b4b44faff1dde9642ba705976',
+            'short_channel_id': 'f16ffbdcd430d9e5',
+            'fee_base_msat': 100,
+            'fee_proportional_millionths': 1500,
+            'cltv_expiry_delta': 9
+          }
+        ]
+      },
+      {
+        'type': 'routing',
+        'data': [
+          {
+            'pubkey':
+                '038f8f113c580048d847d6949371726653e02b928196bad310e3eda39ff61723f6',
+            'short_channel_id': 'f16ffbdcd430d9e5',
+            'fee_base_msat': 100,
+            'fee_proportional_millionths': 1500,
+            'cltv_expiry_delta': 9
+          }
+        ]
+      },
+      {
+        'type': 'payment_secret',
+        'data':
+            '825ad4936d529841e9207bee6e9293e3c1295d39e7a364acb423080f09168677',
+      },
+      {
+        'type': 'feature_bits',
+        'data': {
+          'word_length': 4,
+          'option_data_loss_protect': {
+            'required': false,
+            'supported': false,
+          },
+          'initial_routing_sync': {
+            'required': false,
+            'supported': false,
+          },
+          'option_upfront_shutdown_script': {
+            'required': false,
+            'supported': false,
+          },
+          'gossip_queries': {
+            'required': false,
+            'supported': false,
+          },
+          'var_onion_optin': {
+            'required': false,
+            'supported': true,
+          },
+          'gossip_queries_ex': {
+            'required': false,
+            'supported': false,
+          },
+          'option_static_remotekey': {
+            'required': false,
+            'supported': false,
+          },
+          'payment_secret': {
+            'required': false,
+            'supported': true,
+          },
+          'basic_mpp': {
+            'required': false,
+            'supported': true,
+          },
+          'option_support_large_channel': {
+            'required': false,
+            'supported': false,
+          },
+          'option_anchor_outputs': {
+            'required': false,
+            'supported': false,
+          },
+          'option_anchors_zero_fee_htlc_tx': {
+            'required': false,
+            'supported': true,
+          },
+          'option_shutdown_anysegwit': {
+            'required': false,
+            'supported': false,
+          },
+          'option_channel_type': {
+            'required': false,
+            'supported': false,
+          },
+          'option_payment_metadata': {
+            'required': false,
+            'supported': true,
+          },
+        }
+      },
+    ],
+    'signature':
+        '44fe045f3ece9fc7bc2f44328bdbde2a7078f87ead8bfa39c125cabbb467afa54a0cb6403b9d1307517abecb3d0c0a53c06a6346220e4023afeecd86deb2e10d00',
   }
 ];
