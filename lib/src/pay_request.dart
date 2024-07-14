@@ -15,7 +15,14 @@ Map<String, Decimal> _amounts = {
 };
 
 /// Represents all possible prefixes for pay request
-enum PayRequestPrefix { lnbcrt, lnbc, lntb, lnsb }
+/// They should be ordered by length so the first one that matches has the most
+///  characters in common and is the most specific
+enum PayRequestPrefix {
+  lnbcrt,
+  lntbs,
+  lnbc,
+  lntb,
+}
 
 class Bolt11PaymentRequest {
   final String paymentRequest;
