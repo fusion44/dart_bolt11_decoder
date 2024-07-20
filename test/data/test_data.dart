@@ -5,23 +5,78 @@ import 'package:bolt11_decoder/bolt11_decoder.dart';
 List testData = [
   {
     'request':
-        'lnsb20300n1pdarmakpp57zzavxfm39rzg9juc6awru0zfgxvdaewkdupkmmw0x787ds0k04sdqcvdex2ct5v4jzq6twyp3k7er9cqzys7d9uyytydxmsqdz6h9s9wlu2276hjsysa3upu0mz0k55el5323634yjasmnep6hkmyh93ke6nj0v9p3rzgyl5wwu2cfplyg5wv9wdycqaaejt7',
-    'prefix': PayRequestPrefix.lnsb,
-    'amount': 0.00002030,
-    'timestamp': Int64.parseInt('1540485046'),
+        'lntbs500u1pnf96rpdql2pshjmt9de6zqen0wgs9qun0v36kxaqnp4qdr5d4kl9zvxx4f47ghtgw5c6yujqtzl2fe979e62pv0xy2tkc806pp5xyc27rm53h4th4vwxsrlsz6l45pr4rfhq0pwqg63hs0705ums08ssp53eerxjqamhdsfkf47zef0txh3dyudsjg2azfy5ewwlev29d54nzs9qyysgqcqpcxqyz5vqrzjqdcadltawh0z6qmj6ql2qr5t4ndvk5xz0582ag98dgrz9ml37hhjkq0u7gqqz0qqquqqqqqqqqqqlgqqjqzkhpxa382qzp04p8y8f492xyq4a2damwep9vuwusx54ercn6eykhpuecr5gwwera0mw5g0tuzj4kl3n0lak2xufvdah6pzk3qwq7m3qpgdynsy',
+    'prefix': PayRequestPrefix.lntbs,
+    'amount': 0.0005,
+    'timestamp': Int64.parseInt('1720903777'),
     'tagged': [
+      {'type': 'description', 'data': 'Payment for Product'},
+      {
+        'type': 'payee_pubkey',
+        'data':
+            '034746d6df2898635535f22eb43a98d139202c5f52725f173a5058f3114bb60efd'
+      },
       {
         'type': 'payment_hash',
         'data':
-            'f085d6193b894624165cc6bae1f1e24a0cc6f72eb3781b6f6e79bc7f360fb3eb'
+            '3130af0f748deabbd58e3407f80b5fad023a8d3703c2e02351bc1fe7d39b83cf',
       },
-      {'type': 'description', 'data': 'created in code'},
-      {'type': 'min_final_cltv_expiry', 'data': 144}
+      {
+        'type': 'payment_secret',
+        'data':
+            '8e7233481ddddb04d935f0b297acd78b49c6c248574492532e77f2c515b4acc5',
+      },
+      {
+        'type': 'feature_bits',
+        'data': {
+          'word_length': 4,
+          'option_data_loss_protect': {'required': false, 'supported': false},
+          'initial_routing_sync': {'required': false, 'supported': false},
+          'option_upfront_shutdown_script': {
+            'required': false,
+            'supported': false
+          },
+          'gossip_queries': {'required': false, 'supported': false},
+          'var_onion_optin': {'required': true, 'supported': false},
+          'gossip_queries_ex': {'required': false, 'supported': false},
+          'option_static_remotekey': {'required': false, 'supported': false},
+          'payment_secret': {'required': true, 'supported': false},
+          'basic_mpp': {'required': false, 'supported': true},
+          'option_support_large_channel': {
+            'required': false,
+            'supported': false
+          },
+          'option_anchor_outputs': {'required': false, 'supported': false},
+          'option_anchors_zero_fee_htlc_tx': {
+            'required': false,
+            'supported': false
+          },
+          'option_shutdown_anysegwit': {'required': false, 'supported': false},
+          'option_channel_type': {'required': false, 'supported': false},
+          'option_payment_metadata': {'required': false, 'supported': false},
+          'extra_bits': {'start_bit': 30, 'bits': [], 'has_required': false}
+        }
+      },
+      {'type': 'min_final_cltv_expiry', 'data': 24},
+      {'type': 'expiry', 'data': 86400},
+      {
+        'type': 'routing',
+        'data': [
+          {
+            'pubkey':
+                '0371d6fd7d75de2d0372d03ea00e8bacdacb50c27d0eaea0a76a0622eff1f5ef2b',
+            'short_channel_id': '01fcf200013c0007',
+            'fee_base_msat': 0,
+            'fee_proportional_millionths': 4000,
+            'cltv_expiry_delta': 144
+          },
+        ]
+      },
     ],
     'signature':
-        'f34bc2116469b700345ab960577f8a57b5794090ec781e3f627da94cfe9154751a925d86e790eaf6d92e58db3a9c9ec286231209fa39dc56121f9114730ae69300',
+        '15ae137627500417d42721d352a8c4057aa6f76ec84ace3b90352b91e27ac92d70f3381d10e7647d7edd443d7c14ab6fc66fff6ca3712c6f6fa08ad10381edc401',
     'pubKey':
-        '0208c49665537360e0f94a6403ac2c2776b4ea87b66c084f9f52bf7014f80c6238'
+        '034746d6df2898635535f22eb43a98d139202c5f52725f173a5058f3114bb60efd',
   },
   {
     'request':
