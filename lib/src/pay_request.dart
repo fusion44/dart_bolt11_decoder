@@ -88,4 +88,15 @@ class Bolt11PaymentRequest {
       tags.add(tag);
     }
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'paymentRequest': paymentRequest,
+      'prefix': prefix.name,
+      'amount': amount.toString(),
+      'timestamp': timestamp.toString(),
+      'tags': tags.map((tag) => tag.toJson()).toList(),
+      'signature': signature.join(','),
+    };
+  }
 }
